@@ -1,0 +1,15 @@
+{
+  "name": "project_2",
+  "version": "1.0.0",
+  "description": "\"Maram Alfawaz, Sarah, Hanan\" ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/Maram-Alfawaz/project_2.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
