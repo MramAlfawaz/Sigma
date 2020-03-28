@@ -4,12 +4,27 @@
   "description": "\"Maram Alfawaz, Sarah, Hanan\" ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon server"
   },
   "repository": {
     "type": "git",
     "url": "https://git.generalassemb.ly/Maram-Alfawaz/project_2.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.6",
+    "moongoose": "0.0.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
 }
