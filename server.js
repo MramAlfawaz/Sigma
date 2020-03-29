@@ -4,6 +4,9 @@ const PORT = process.env.PORT;
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const authRoutes = require("./routes/auth.route");
+const bookRoutes = require("./routes/book.routes");
+const methodOverride = require("method-override");
+
 
 //session connect with unique id for each user
 const session = require("express-session");
@@ -29,6 +32,9 @@ mongoose.connect(
 );
 
 mongoose.set("debug", true);
+
+app.use(methodOverride("_method")); 
+
 app.use(express.static("public")); //tells express to look in public for static files
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -60,7 +66,7 @@ app.use(function(request, response, next) {
 });
 
 app.use(authRoutes);
-
+app.use(bookRoutes);
 app.get("*", (request, response) => {
   response.send("doesnt exist yet!");
 });
