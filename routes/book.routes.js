@@ -1,10 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const moment = require("moment");
-var formidable = require('formidable');
-
 const multer = require("multer");
-const fs = require("fs");
 const path = require("path");
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -21,7 +18,7 @@ router.get("/book", (req, res) => {
   Book.find()
     .populate()
     .then(books => {
-      res.render("book/index", { books, moment });
+      res.render("book/bookindex", { books, moment });
     }).catch(err => {
       console.log(err);
     })
@@ -65,7 +62,7 @@ router.get("/book/:id", (request, response) => {
 router.delete("/book/:id/delete", (request, response) => {
    Book.findByIdAndDelete(request.params.id)
    .then(book => {
-      response.redirect("/books");
+      response.redirect("/book");
   }).catch(err => {
       console.log(err);
       response.send("Error!!!!!");
