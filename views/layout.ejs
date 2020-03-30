@@ -23,6 +23,28 @@
     </div>
     <% }); %> <% } %>
 
+
+    <header>
+      <div class="container">
+        <h1 class="logo"><a href="/home">logo</a></h1>
+        <nav>
+          <ul class="navigation">
+                  <% if(currentUser) {%>
+            <li> <a href="#"><%= currentUser.firstname %>'s Profile</a> </li> 
+           <li> <a href="/auth/setting">Setting</a></li>
+            <li> <a href="/auth/logout">Logout</a></li> 
+     
+            <%} %> <% if(!currentUser) {%>
+              <li>
+              <a href="/auth/signin">Signin</a> </li>
+
+            <li>  <a href="/auth/signup">Signup</a></li>
+              <%} %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+<!-- 
     <nav class="navigation">
       <a href="/home">Home </a>
       <div>
@@ -34,7 +56,12 @@
         <a href="/auth/signup">Signup</a>
         <%} %>
       </div>
-    </nav>
+    </nav> -->
+
+
+
+
+
     <%- body %>
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
@@ -44,3 +71,5 @@
     <script src="/js/book.js"></script>
   </body>
 </html>
+
+

@@ -1,5 +1,4 @@
 <h3>Setting</h3>
-
 <div class="container">
     <div class="mr-auto col-8">
         <form method="POST" action="/auth/setting">
@@ -11,17 +10,19 @@
                 <label>Last Name</label>
                 <input name="lastname" type="text" />
             </div>
-            <div>
-                <label>Email</label>
-                <input name="email" />
-            </div>
+
             <div> -->
-                <label>Password</label>
-                <input name="password" type="password" />
-            </div>
-            <div>
-                <button class="btn btn-auth" type="submit">change password</button>
-            </div>
+
+                <% if(currentUser) {%>
+                    <label>Password</label>
+                    <input name="password" type="password" />
+                </div>
+                <div>
+                    <button class="btn btn-auth" type="submit">change password</button>
+                </div>
+                    <%} %> 
+
+                
         </form>
     </div>
 </div>

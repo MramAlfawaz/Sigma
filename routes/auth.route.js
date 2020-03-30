@@ -86,11 +86,6 @@ router.get("/auth/logout", (request, response) => {
 });
 
 
-router.get("/auth/setting", (request, response) => {
-  response.render("auth/setting");
-});
-
-
 // router.post("/auth/setting", (request, response) => {
 //   const newPassword = request.body.password;
 //   User.findOneAndUpdate(newPassword);
