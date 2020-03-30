@@ -3,7 +3,7 @@ const User = require("../models/user.model");
 const passport = require("../config/ppConfig");
 const isLoggedIn = require("../config/isLoggedin");
 const { check, validationResult } = require("express-validator");
-
+const bcrypt = require('bcryptjs')
 router.get("/auth/signup", (request, response) => {
   response.render("auth/signup");
 });
@@ -88,12 +88,20 @@ router.get("/auth/setting", (request, response) => {
   response.render("auth/setting");
 });
 
-// router.post("/auth/setting", (request, response) => {
-//   const newPassword = request.body.password;
-//   User.findOneAndUpdate(newPassword);
-//   response.redirect("/auth/signin");
-// });
 
 
+router.put('/auth/updatePassword' , (req, res) =>{
+
+  var newPassword = bcrypt.hashSync(req.body.password , 10)
+  console.log(newPassword)
+ //
+  User.findByIdAndUpdate(req.user._id ,{password : newPassword})
+  .then(user =>{
+    console.log(user)
+    res.redirect('/home')
+  }).catch(err => res.send ({pass : newPassword , user:req.user}))
+
+
+})
 
 module.exports = router;
