@@ -4,7 +4,7 @@
     <div>
         <a href="/quote/<%= quote._id%>"><%= quote.quote %></a>
     </div>
-    <div> description: <%= quote.auther %></div>
+    <div> Auther: <%= quote.auther %></div>
     <div> by: <%= quote.quoteUser %></div>
     <hr>
     <div>Created On: <%= moment(quote.createdAt).fromNow() %></div>

@@ -4,6 +4,7 @@ const passport = require("../config/ppConfig");
 const isLoggedIn = require("../config/isLoggedin");
 const { check, validationResult } = require("express-validator");
 
+
 router.get("/auth/signup", (request, response) => {
   response.render("auth/signup");
 });
@@ -83,5 +84,18 @@ router.get("/auth/logout", (request, response) => {
   request.flash("success", "Yay! your out!");
   response.redirect("/auth/signin");
 });
+
+
+router.get("/auth/setting", (request, response) => {
+  response.render("auth/setting");
+});
+
+
+// router.post("/auth/setting", (request, response) => {
+//   const newPassword = request.body.password;
+//   User.findOneAndUpdate(newPassword);
+//   response.redirect("/auth/signin");
+// });
+
 
 module.exports = router;
