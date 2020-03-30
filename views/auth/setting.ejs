@@ -1,0 +1,28 @@
+<h3>Setting</h3>
+<div class="container">
+    <div class="mr-auto col-8">
+        <form method="POST" action="/auth/setting">
+            <!-- <div>
+                <label>First Name</label>
+                <input name="firstname" type="text" />
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input name="lastname" type="text" />
+            </div>
+
+            <div> -->
+
+                <% if(currentUser) {%>
+                    <label>Password</label>
+                    <input name="password" type="password" />
+                </div>
+                <div>
+                    <button class="btn btn-auth" type="submit">change password</button>
+                </div>
+                    <%} %> 
+
+                
+        </form>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="mr-auto col-8">
       <form method="POST" action="/auth/signup">
         <div>
@@ -22,4 +22,63 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> -->
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body id="authForm">
+  <form method="POST" action="/auth/signup">
+
+    <div id="login_table">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user"></i></span>
+        </div>
+        <input name="firstname" type="text" class="form-control" id="username" placeholder="First Name" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user"></i></span>
+        </div>
+        <input name="lastname" type="text" class="form-control" id="username" placeholder="Last Name" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <input name="email" type="text" class="form-control" id="username" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-lock-open"></i></span>
+          </div>
+          <input name="password" type="password" class="form-control" id="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      <button id="login" class="btn btn-dark btn-lg btn-block">SIGN UP</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">×</span>
+          <p class="message"></p>
+        </div>
+    </div>
+
+
+</form>
+
+
+</body>
+</html>
+

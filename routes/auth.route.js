@@ -84,4 +84,16 @@ router.get("/auth/logout", (request, response) => {
   response.redirect("/auth/signin");
 });
 
+router.get("/auth/setting", (request, response) => {
+  response.render("auth/setting");
+});
+
+// router.post("/auth/setting", (request, response) => {
+//   const newPassword = request.body.password;
+//   User.findOneAndUpdate(newPassword);
+//   response.redirect("/auth/signin");
+// });
+
+
+
 module.exports = router;
