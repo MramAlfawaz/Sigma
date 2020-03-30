@@ -1,12 +1,19 @@
 <a href="/quotes">Go Back</a>
-<form method="POST" action="/quote/create" >
+<form method="POST" action="/quote/create" enctype="multipart/form-data" >
     <div>
         <label>quote: </label>
         <input name="quote" />
     </div>
+
+    <div>
+        <label>Author Image: </label>
+        <input type="file" name="imageupload">
+    </div>
+
     <div>
         <label>auther: </label>
         <input name="auther" />
     </div>
+
     <button type="submit">Create Quote</button>
 </form>

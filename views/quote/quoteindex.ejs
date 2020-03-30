@@ -4,14 +4,26 @@
     <div>
         <a href="/quote/<%= quote._id%>"><%= quote.quote %></a>
     </div>
+
     <div> " <%= quote.auther %> "</div>
+
+    <div> <img src=" <%= quote.imageupload %>"> </div>
+
+
     <div> by: <%= quote.quoteUser %></div>
+
     <hr>
     <div>Created On: <%= moment(quote.createdAt).fromNow() %></div>
+
     <div>
+
+
         <form method="POST" action="/quote/<%= quote._id %>/delete?_method=DELETE">
             <button type="submit">Delete Quote</button>
         </form>
+
+
     </div>
     <% }) %>
 </div>
+

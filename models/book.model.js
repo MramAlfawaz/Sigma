@@ -23,8 +23,5 @@ const bookSchema = mongoose.Schema(
     );
 
 
-// at user signup before her data stored in
-// db hashing the password by this fun we can write it in server but 
-// here more oganized
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;

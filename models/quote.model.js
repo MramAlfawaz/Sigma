@@ -10,6 +10,9 @@ const QuoteSchema = mongoose.Schema(
             type: String,
             required: true
         },
+        imageupload: {
+            type: String,
+        },
         quoteUser: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
@@ -19,8 +22,6 @@ const QuoteSchema = mongoose.Schema(
 );
 
 
-// at user signup before her data stored in
-// db hashing the password by this fun we can write it in server but 
-// here more oganized
+
 const Quote = mongoose.model("Quote", QuoteSchema);
 module.exports = Quote;
