@@ -69,5 +69,11 @@ router.delete("/book/:id/delete", (request, response) => {
   })
 })
 
+
+router.get("/profile", (req,res)=>{
+  res.render("user/profile")
+})
+
+
 module.exports = router
 
