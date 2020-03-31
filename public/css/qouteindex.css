@@ -1,10 +1,11 @@
+/* qouote style */
+  
 .qouteindex
+
 {
-  background-color:#f2f2f2;
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
-    display:flex;
-    flex-direction: row;
+  display: flex;
 
 }
 
@@ -14,14 +15,14 @@
   box-sizing: border-box;
 }
 
-h5
+.qh2
 {
   margin:0px;
   font-size:1.4em;
   font-weight:700;
 }
 
-p
+.qp
 {
   font-size:12px;
 }
@@ -65,13 +66,10 @@ p
 {
   height:6em;
   width:14em;
-  padding:1em 2em;
-  position:Absolute;
-  top:0px;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+  
   background-size:cover;
   background-repeat:no-repeat;
 }
@@ -129,4 +127,7 @@ p
   background-color:blue;
   cursor:pointer;
 }
+
+
+
 

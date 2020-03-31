@@ -51,12 +51,12 @@ router.post("/quote/create", upload.single("imageupload"), (req, res, next) => {
     .save()
     .then(() => {
       res.redirect("/quote/")
-    })
+   })
     .catch(err => {
-      console.log(err);
-      res.send("Error!!!!!");
+       console.log(err);
+     res.send("Error!!!!!");
     });
-});
+ });
 
 router.get("/quote/:id", (req, res) => {
   Quote.findById(req.params.id)
