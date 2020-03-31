@@ -6,20 +6,34 @@
     justify-content: center;
   }
 
+  p{
+    font-size: 25px;
+    text-align: left;
+    margin-left: 70px;
+    line-height: 33px;
+    color: rgb(255, 255, 255);
+   
+  }
+
+
   .homeHeader {
-   height: 40px;
+   height: 70px;
    background-color: #353535;
-   background-color: rgba(53, 53, 53, 0.4); 
+   background-color: rgb(240, 236, 236); 
    display: flex;
    justify-content: space-between;
    align-items: center;
+   border-bottom: 1px dashed rgb(168, 129, 91);
+   
 
   }
 
   section{
-    padding-top: 220px;
-    height: 600px;
+    padding-top: 190px;
+    height: 670px;
     background: url("https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");  
+    opacity: 0.85;
+    border-bottom: 1px dashed rgb(168, 129, 91);
 
   }
     
@@ -55,7 +69,7 @@ body {
   place-items: center;
 } */
 .page-content {
-  height: 620px;
+  height: 800px;
   display: grid;
   align-items: center;
   grid-gap: 1rem;
@@ -127,16 +141,25 @@ body {
   transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
 .card:nth-child(1):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1556171478l/45214488.jpg);
 }
 .card:nth-child(2):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url(https://images-na.ssl-images-amazon.com/images/I/91-jISIPVFL.jpg);
 }
 .card:nth-child(3):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1564356449l/52425429._SX318_SY475_.jpg);
 }
 .card:nth-child(4):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1565974625l/38124119._SY475_.jpg);
+}
+.card:nth-child(5):before {
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391120695l/16299.jpg);
+}.card:nth-child(6):before {
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1565443204l/43908981.jpg);
+}.card:nth-child(7):before {
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1583867670l/45046764.jpg);
+}.card:nth-child(8):before {
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1408888403l/13531561.jpg);
 }
 .content {
   position: relative;
@@ -163,12 +186,14 @@ body {
   font-weight: bold;
   line-height: 1.2;
 }
+
 .copy {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-style: italic;
   line-height: 1.35;
 }
+
 .btn {
   cursor: pointer;
   margin-top: 1.5rem;
@@ -255,7 +280,7 @@ body {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  min-height: 40vh;
+  min-height: 30vh;
   background-color: #353535;
    background-color: rgba(53, 53, 53, 0.4); 
 }

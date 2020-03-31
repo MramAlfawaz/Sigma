@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/main.css">
+<br>
+    <h1 class="qh1"> The Books  </h1>
+    <div class="qouteindex">
+        <% books.forEach(function(book){ %>
+    <div class="center">
+        <div class="property-card">
+          <a href="/book/create">
+            <div>
+                 <img class="property-image" src="<%= book.imageupload %>">
+            </div>
+          </a>
+          <div class="property-description">
+            <p class="qp"> <%= book.description %> <br>  <%= book.pagesCount %> </p>
+            <h2 class="qh2">   <%= book.bookUser %> </h2>
+          </div>
+        </div>
+    </div>
+      <% }) %>
+    </div>
