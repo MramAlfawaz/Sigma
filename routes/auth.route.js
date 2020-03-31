@@ -72,9 +72,13 @@ router.post("/auth/signin",
 // method in config 
 router.get("/home", isLoggedIn, (request, response) => {
   // request.user
+
   User.find().then(users => {
-    response.render("home", { users });
-  });
+ //console.log( users ,  'THis is request body ');
+   const  user = users.find( u => u.email === request.user.email) ;
+   //console.log(user,  'THis is request body ')
+   response.render("home", { user });
+})
 });
 
 
@@ -94,14 +98,13 @@ router.put('/auth/updatePassword' , (req, res) =>{
 
   var newPassword = bcrypt.hashSync(req.body.password , 10)
   console.log(newPassword)
- //
+
   User.findByIdAndUpdate(req.user._id ,{password : newPassword})
   .then(user =>{
     console.log(user)
     res.redirect('/home')
   }).catch(err => res.send ({pass : newPassword , user:req.user}))
-
-
 })
+
 
 module.exports = router;
