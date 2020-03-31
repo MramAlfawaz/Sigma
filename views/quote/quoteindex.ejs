@@ -1,29 +1,40 @@
-<h1>Quote Page</h1>
-<div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/quote.css" />
+
+    <title>Quotes</title>
+</head>
+<body>
+    
+        <h1 class="qh1"> Quotes </h1>
+    <div class="qouteindex">
     <% quotes.forEach(function(quote){ %>
-    <div>
-        <a href="/quote/<%= quote._id%>"><%= quote.quote %></a>
+    
+    <div class="center">
+        <div class="property-card">
+          <a href="/quote/create">
+            <div >
+                <img class="property-image" src="<%= quote.imageupload %>"> 
+            </div>
+        </a>
+          <div class="property-description">
+            <p class="qp"> <%= quote.quote %> </p>
+            <h2 class="qh2"> <%= quote.auther %> </h2>
+           
+          </div>
+          
+        </div>
     </div>
 
-    <div> " <%= quote.auther %> "</div>
-
-    <div> <img src=" <%= quote.imageupload %>"> </div>
-
-
-    <div> by: <%= quote.quoteUser %></div>
-
-    <hr>
-    <div>Created On: <%= moment(quote.createdAt).fromNow() %></div>
-
-    <div>
-
-
-        <form method="POST" action="/quote/<%= quote._id %>/delete?_method=DELETE">
-            <button type="submit">Delete Quote</button>
-        </form>
-
-
+      <% }) %>
     </div>
-    <% }) %>
-</div>
+</body>
+</html>
+
+
+
 

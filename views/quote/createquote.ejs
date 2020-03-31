@@ -1,19 +1,54 @@
-<a href="/quotes">Go Back</a>
-<form method="POST" action="/quote/create" enctype="multipart/form-data" >
-    <div>
-        <label>quote: </label>
-        <input name="quote" />
-    </div>
 
-    <div>
-        <label>Author Image: </label>
-        <input type="file" name="imageupload">
-    </div>
+    <body>
+      <a href="/quotes">Go Back</a>
 
-    <div>
-        <label>auther: </label>
-        <input name="auther" />
-    </div>
+      <form method="POST" action="/quote/create" enctype="multipart/form-data" >
 
-    <button type="submit">Create Quote</button>
-</form>
+        <div class="cqcontainer"> 
+          <header class="cqheader">
+            <h1>Create Quote:</h1>
+          </header>
+
+          <div class="card search-card">
+            <form id='wiki-search-form'>
+                <h3>Quote:</h3>
+              <input name="quote" id='wiki-search' type="text"  autocomplete="off" />
+            </form>
+            <a href="#"><i class='fa fa-search'></i></a>
+          </div>
+
+          <div class="card search-card">
+            <form id='wiki-search-form'>
+                <h3>auther: </h3>
+              <input name="auther" id='wiki-search' type="text" autocomplete="off" />
+            </form>
+            <a href="#"><i class='fa fa-search'></i></a>
+          </div>
+
+          <div class="card search-card">
+            <form id='wiki-search-form'>
+                <h3>Author Image: </h3>
+
+              <input type="file" name="imageupload" id='wiki-search' autocomplete="off" />
+            </form>
+            <a href="#"><i class='fa fa-search'></i></a>
+          </div>
+
+
+         
+          <div class="random-article">
+            
+
+            <button class="qbutton" type="submit">Create </button>
+          </div>
+         
+        
+          
+        </div>
+      </form>
+
+      </body>
+
+
+
+
