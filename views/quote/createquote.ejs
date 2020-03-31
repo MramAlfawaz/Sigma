@@ -1,45 +1,22 @@
-
-
-      <form method="POST" action="/quote/create" enctype="multipart/form-data" >
-
-        <div class="cqcontainer"> 
-          <header class="cqheader">
-            <h1>Create Quote:</h1>
-          </header>
-
-          <div class="card search-card">
-                <h3>Quote:</h3>
-              <input name="quote" id='wiki-search' type="text" />
-            <a href="#"><i class='fa fa-search'></i></a>
-          </div>
-
-          <div class="card search-card">
-                <h3>auther: </h3>
-              <input name="auther" id='wiki-search' type="text"  />
-            <a href="#"><i class='fa fa-search'></i></a>
-          </div>
-
-          <div class="card search-card">
-                <h3>Author Image: </h3>
-
-              <input type="file" name="imageupload" id='wiki-search' />
-            <a href="#"><i class='fa fa-search'></i></a>
-          </div>
-
-
-         
-          <div class="random-article">
-            
-
-            <button class="qbutton" type="submit">Create </button>
-          </div>
-         
-        
-          
-        </div>
-      </form>
-
-
-
-
-
+<link rel="stylesheet" href="/css/QuoteBookSetting-Create.css" />
+<form method="POST" action="/quote/create" enctype="multipart/form-data" 
+>
+  <div id="form-main">
+    <div id="form-div">
+      <h1>Create Quote</h1>
+      <form class="form" id="form1">
+        <label>Quote</label>
+        <p>
+          <input name="quote" type="text" class="feedback-input" />
+        </p>
+        <label>Auther</label>
+        <p>
+          <input name="auther" type="text" class="feedback-input" />
+        </p>
+        <label>Quote Image</label>
+        <p>
+          <input name="imageupload" type="file" class="feedback-input" />
+        </p>
+        <input type="submit" value="Create Quote" id="submit-button" />
+    </div>
+</form>

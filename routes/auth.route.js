@@ -8,8 +8,8 @@ router.get("/auth/signup", (request, response) => {
   response.render("auth/signup");
 });
 
-router.post( "/auth/signup",
-// adding validating ststment after npm validator
+router.post("/auth/signup",
+  // adding validating ststment after npm validator
   [
     check("firstname").isLength({ min: 2 }), // there max
     check("lastname").isLength({ min: 2 }),
@@ -22,13 +22,13 @@ router.post( "/auth/signup",
   (request, response) => {
     // first case if anyone make mistake in one of fourth
     // input validator run first case error
-    const errors = validationResult(request); 
+    const errors = validationResult(request);
     console.log(errors);
     if (!errors.isEmpty()) {
       request.flash("autherror", errors.errors);
       return response.redirect("/auth/signup");
     }
-     
+
     // second case no error
     let user = new User(request.body);
     user
@@ -95,11 +95,13 @@ router.get("/auth/setting", (request, response) => {
 
 
 router.put('/auth/updatePassword' , (req, res) =>{
-
+  var newFirstName = req.body.firstname;
+  var newLastname = req.body.lastname;
+  var newEmail = req.body.email;
   var newPassword = bcrypt.hashSync(req.body.password , 10)
   console.log(newPassword)
 
-  User.findByIdAndUpdate(req.user._id ,{password : newPassword})
+  User.findByIdAndUpdate(req.user._id, { password: newPassword, firstname: newFirstName, lastname: newLastname, email: newEmail})
   .then(user =>{
     console.log(user)
     res.redirect('/home')

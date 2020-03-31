@@ -1,0 +1,92 @@
+/* login logout form */
+#authForm{
+    background: url("https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover; 
+}
+#login_table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+}
+input{
+    opacity: .5;
+}
+input:focus{
+    opacity: 5;
+}
+#login {
+  background-color: rgba(175, 96, 32, 0.9);
+  border: solid 1px rgba(175, 96, 32, 0.7);
+}
+/* layout.ejs nav style */
+  body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    /* height of nav */
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    background-color: #E9EEF1;
+  }
+  .container {
+    /* organize nav content */
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .layoutheader {
+    background: rgba(175, 96, 32, 0.5);
+  }
+  .logo {
+    color: white;
+    text-transform: uppercase;
+  }
+  .logo a {
+    display: block;
+    text-decoration: none;
+    color: rgb(218, 200, 188);
+    margin-top: 6px;
+  }
+  .logo a:hover {
+    text-decoration: none;
+    color: white;
+  }
+  .navigation {
+    list-style: none;
+  }
+  .navigation li {
+    display: block;
+    padding: .5em;
+  }
+  .navigation a {
+    display: block;
+    text-decoration: none;
+    color: rgb(218, 200, 188);
+  }
+  .navigation a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+    .navigation li {
+      display: inline-block;
+    }
+  @media (min-width: 900px) {
+    .logo {
+      float: left;
+    }
+    .navigation {
+      float: right;
+    }
+    /* nav with baclground */
+    .navigation li {
+     margin-top: 6px;
+    }
+    header::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+
+ 
