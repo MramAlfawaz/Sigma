@@ -4,13 +4,12 @@ const passport = require("../config/ppConfig");
 const isLoggedIn = require("../config/isLoggedin");
 const { check, validationResult } = require("express-validator");
 
-
 router.get("/auth/signup", (request, response) => {
   response.render("auth/signup");
 });
 
-router.post( "/auth/signup",
-// adding validating ststment after npm validator
+router.post("/auth/signup",
+  // adding validating ststment after npm validator
   [
     check("firstname").isLength({ min: 2 }), // there max
     check("lastname").isLength({ min: 2 }),
@@ -23,13 +22,13 @@ router.post( "/auth/signup",
   (request, response) => {
     // first case if anyone make mistake in one of fourth
     // input validator run first case error
-    const errors = validationResult(request); 
+    const errors = validationResult(request);
     console.log(errors);
     if (!errors.isEmpty()) {
       request.flash("autherror", errors.errors);
       return response.redirect("/auth/signup");
     }
-     
+
     // second case no error
     let user = new User(request.body);
     user
@@ -85,12 +84,16 @@ router.get("/auth/logout", (request, response) => {
   response.redirect("/auth/signin");
 });
 
+router.get("/auth/setting", (request, response) => {
+  response.render("auth/setting");
+});
 
 // router.post("/auth/setting", (request, response) => {
 //   const newPassword = request.body.password;
 //   User.findOneAndUpdate(newPassword);
 //   response.redirect("/auth/signin");
 // });
+
 
 
 module.exports = router;
