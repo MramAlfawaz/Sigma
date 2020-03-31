@@ -1,24 +1,34 @@
-<h3>Setting</h3>
-<div class="container">
-    <div class="mr-auto col-8">
-        <form method="POST" action="/auth/setting">
-            <!-- <div>
+<link rel="stylesheet" href="/css/QuoteBookSetting-Create.css" />
+
+
+<form method="POST" action="/auth/updatePassword?_method=PUT">
+    <div id="form-main">
+        <div id="form-div">
+            <h1>Setting</h1>
+
+            <form class="form" id="form1">
+               <% if(currentUser) {%>
                 <label>First Name</label>
-                <input name="firstname" type="text" />
-            </div>
-            <div>
+                <p>
+                    <input name="firstname" type="text" class="feedback-input" />
+                </p>
                 <label>Last Name</label>
-                <input name="lastname" type="text" />
-            </div>
-            <div> -->
-            <% if(currentUser) {%>
-            <label>Password</label>
-            <input name="password" type="password" />
-    </div>
-    <div>
-        <button class="btn btn-auth" type="submit">change password</button>
-    </div>
-    <%} %>
-    </form>
-</div>
-</div>
+                <p>
+                    <input name="lastname" type="text" class="feedback-input" />
+                </p>
+                <label>email</label>
+                <p>
+                    <input name="email" type="email" class="feedback-input" />
+                </p>
+                <label>Password</label>
+                <p>
+                    <input name="password" type="password" class="feedback-input" />
+                </p>
+                
+
+                <input type="submit" value="Change Password" id="submit-button" />
+
+
+        </div>
+        <%} %>
+</form>
