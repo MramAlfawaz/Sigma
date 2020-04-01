@@ -6,7 +6,7 @@
     justify-content: center;
   }
 
-  p{
+  .aboutParagraph{
     font-size: 25px;
     text-align: left;
     margin-left: 70px;
@@ -14,7 +14,7 @@
     color: rgb(255, 255, 255);
    
   }
-
+ 
 
   .homeHeader {
    height: 70px;
@@ -93,7 +93,7 @@ body {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   overflow: hidden;
   padding: 1rem;
   width: 100%;
