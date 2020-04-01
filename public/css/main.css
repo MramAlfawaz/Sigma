@@ -1,32 +1,3 @@
-/* login logout form */
-
-#authForm{
-    background: url("https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: cover; 
-}
-
-#login_table{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-}
-
-input{
-    opacity: .5;
-}
-input:focus{
-    opacity: 5;
-}
-
-#login {
-  background-color: rgba(175, 96, 32, 0.9);
-  border: solid 1px rgba(175, 96, 32, 0.7);
-}
-
-
-
 
 
 /* layout.ejs nav style */
@@ -127,6 +98,7 @@ input:focus{
 
 *
 {
+  margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -243,5 +215,6 @@ input:focus{
   background-color:blue;
   cursor:pointer;
 }
+
 
 

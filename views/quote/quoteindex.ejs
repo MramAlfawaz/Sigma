@@ -1,10 +1,8 @@
 <link rel="stylesheet" href="/public/css/qouteindex.css">
-    
+<br>
   <h1 class="qh1"> Quotes </h1>
-  
     <div class="qouteindex">
     <% quotes.forEach(function(quote){ %>
-    
     <div class="center">
         <div class="property-card">
           <a href="/quote/create">
@@ -15,15 +13,8 @@
           <div class="property-description">
             <p class="qp"> <%= quote.quote %> </p>
             <h2 class="qh2"> <%= quote.auther %> </h2>
-           
           </div>
-          
         </div>
     </div>
-
       <% }) %>
     </div>
-
-
-
-

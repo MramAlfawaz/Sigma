@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <title>Login Application</title>
-  </head>
-  <body>
-    <% if(alerts.success){ %> <% alerts.success.forEach(function(msg){ %>
-    <div class="alert alert-success">
-      <%= msg %>
-    </div>
-    <% }); %> <% } %> <% if(alerts.error){ %> <%
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <title>Login Application</title>
+</head>
+<body>
+  <% if(alerts.success){ %> <% alerts.success.forEach(function(msg){ %>
+  <div class="alert alert-success">
+    <%= msg %>
+  </div>
+  <% }); %> <% } %> <% if(alerts.error){ %> <%
     alerts.error.forEach(function(msg){ %>
-    <div class="alert alert-danger">
-      <%= msg %>
-    </div>
-    <% }); %> <% } %> <% if(alerts.autherror){ %> <%
+  <div class="alert alert-danger">
+    <%= msg %>
+  </div>
+  <% }); %> <% } %> <% if(alerts.autherror){ %> <%
     alerts.autherror.forEach(function(msg){ %>
-    <div class="alert alert-danger">
-      Your <%= msg.param %> has <%= msg.msg %>
+  <div class="alert alert-danger">
+    Your <%= msg.param %> has <%= msg.msg %>
+  </div>
+  <% }); %> <% } %>
+  <header class="layoutheader">
+    <div class="container">
+      <h1 class="logo"><a href="/home">logo</a></h1>
+      <nav>
+        <ul class="navigation">
+          <% if(currentUser) {%>
+          <li> <a href="/profile"><%= currentUser.firstname %>'s Profile</a> </li>
+          <li> <a href="/book">Books</a></li>
+          <li> <a href="/quote">Quotes</a></li>
+
+          <li> <a href="/auth/setting">Setting</a></li>
+          <li> <a href="/auth/logout">Logout</a></li>
+          <%} %> <% if(!currentUser) {%>
+          <li>
+            <a href="/auth/signin">Signin</a> </li>
+          <li> <a href="/auth/signup">Signup</a></li>
+          <%} %>
+        </ul>
+      </nav>
     </div>
-    <% }); %> <% } %>
+  </header>
+
+  <%- body %>
 
 
-    <header class="layoutheader">
-      <div class="container">
-        <h1 class="logo"><a href="/home">logo</a></h1>
-        <nav>
-          <ul class="navigation">
-                  <% if(currentUser) {%>
-            <li> <a href="#"><%= currentUser.firstname %>'s Profile</a> </li> 
-           <li> <a href="/auth/setting">Setting</a></li>
-            <li> <a href="/auth/logout">Logout</a></li> 
-     
-            <%} %> <% if(!currentUser) {%>
-              <li>
-              <a href="/auth/signin">Signin</a> </li>
-
-            <li>  <a href="/auth/signup">Signup</a></li>
-              <%} %>
-          </ul>
-        </nav>
-      </div>
-    </header>
-<!-- 
-    <nav class="navigation">
-      <a href="/home">Home </a>
-      <div>
-        <% if(currentUser) {%>
-        <a href="/home"><%= currentUser.firstname %></a>
-        <a href="/auth/logout">Logout</a>
-        <%} %> <% if(!currentUser) {%>
-        <a href="/auth/signin">Signin</a>
-        <a href="/auth/signup">Signup</a>
-        <%} %>
-      </div>
-    </nav> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="/js/book.js"></script>
 
 
+</body>
 
-
-
-    <%- body %>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/book.js"></script>
-  </body>
 </html>
-
-
