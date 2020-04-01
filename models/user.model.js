@@ -35,7 +35,15 @@ const userSchema = mongoose.Schema(
       type: String,
       enum: ["admin", "regular", "superAdmin"], //only listed can be values
       default: "admin"
-    }
+    },
+    quote: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Quote'
+  },
+  book: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Book'
+}
   },
   { timestamps: true }
 );

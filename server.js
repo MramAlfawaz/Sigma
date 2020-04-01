@@ -7,6 +7,8 @@ const authRoutes = require("./routes/auth.route");
 const bookRoutes = require("./routes/book.routes");
 const quoteRoutes = require("./routes/quote.routes");
 const methodOverride = require("method-override");
+const profileRoutes =require("./routes/profile.route")
+
 
 
 //session connect with unique id for each user
@@ -69,6 +71,7 @@ app.use(function(request, response, next) {
 app.use(authRoutes);
 app.use(bookRoutes);
 app.use(quoteRoutes);
+app.use(profileRoutes);
 
 app.get("*", (request, response) => {
   response.send("doesnt exist yet!");
