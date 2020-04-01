@@ -1,0 +1,8 @@
+<h1>user Book Page</h1>
+<div>
+    <% User.forEach(function(user){ %> 
+<div> <img src="<%= user.imageupload %>" height="200px" width="150px"></div>
+        
+        <div>book Name: <%= user.bookName %></div>
+        <% }) %>
+      </div>

@@ -12,6 +12,10 @@ const bookSchema = mongoose.Schema(
             type: Number,
 
         },
+        booklink: {
+            type: String,
+        },
+        
         imageupload: {
             type: String,
         },
