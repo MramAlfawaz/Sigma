@@ -3,6 +3,7 @@ const router = express.Router();
 const moment = require("moment");
 const multer = require("multer");
 const path = require("path");
+const User = require("../models/user.model");
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
     cb(null, "public/images");
@@ -41,8 +42,13 @@ router.post("/book/create", upload.single("imageupload"), (req, res, next) => {
   //save book
   book
     .save()
-    .then(() => {
+    .then((book) => {
+
+    User.findByIdAndUpdate(req.user._id, {$push:{books:book}})
+    .then( ()=> {
       res.redirect("/book/")
+    } )
+
     })
     .catch(err => {
       console.log(err);
@@ -71,7 +77,11 @@ router.delete("/book/:id/delete", (request, response) => {
 
 
 router.get("/profile", (req,res)=>{
-  res.render("user/profile")
+  User.findById(req.user._id).populate("books")
+  .then ((user)=>{
+    let books = user.books
+    res.render("user/profile", {books})
+  })
 })
 
 
