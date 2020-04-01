@@ -285,8 +285,6 @@ body {
   -webkit-box-pack: center;
           justify-content: center;
   min-height: 30vh;
-  background-color: #353535;
-   background-color: rgba(53, 53, 53, 0.4); 
 }
 
 .social-icon {
@@ -392,6 +390,9 @@ body {
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
 }
+
+
+
 
 
 

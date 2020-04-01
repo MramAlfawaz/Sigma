@@ -86,4 +86,27 @@ router.delete("/quote/:id/delete", (req, res) => {
     });
 });
 
+router.post("/quote/create", (req, res) => {
+  console.log(req.body);
+  
+  
+  let quote = new Quote(req.body);
+  quote.imageupload = req.body.imageupload1;
+  //save quote
+  quote
+    .save()
+    .then((quote) => {
+
+      User.findByIdAndUpdate(req.user._id, {$push:{quotes:quote}})
+        .then(() => {
+          res.redirect("/quote/")
+        })
+
+    })
+    .catch(err => {
+       console.log(err);
+     res.send("Error!!!!!");
+    });
+ });
+
 module.exports = router;

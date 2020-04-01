@@ -1,8 +1,23 @@
+<style>
+  .buttonload {
+  justify-content: space-around;
+    background-color: rgb(136, 115, 87); /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 24px; /* Some padding */
+    font-size: 16px; /* Set a font-size */
+    /* display: inline; */
+  }
+  /* Add a right margin to each icon */
+  .fa {
+    margin-left: -12px;
+    margin-right: 8px;
+  }
+  </style>
 
 <link rel="stylesheet" href="/css/QuoteBookSetting-Create.css" />
-
-
-<form method="POST" action="/book/create" enctype="multipart/form-data"  >
+<form id="form" method="POST" action="/book/create" enctype="multipart/form-data"  >
+  
   <div id="form-main">
     <div id="form-div">
         <h1>Create Book</h1>
@@ -28,7 +43,13 @@
 
         <label>Book Image</label>
         <p>
-          <input name="imageupload" type="file" class="feedback-input" />
+          <input id="upload" name="imageupload" type="file" class="feedback-input" /> 
+  
+          <button id="b" name="imageupload" value="hi" class="buttonload">
+            <i id="a" class="fa fa-spinner fa-spin"> </i> Loading
+          </button>
+          <input name="imageupload1" id="imageupload1" type="url" class="feedback-input" />
+
         </p>
 
 
@@ -40,3 +61,52 @@
 
     
 </form>
+
+<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDXRH4jG0TzyuHjlyM9jRdQWE6Zs4Pe0Io",
+            authDomain: "yassergame-5850b.firebaseapp.com",
+            databaseURL: "https://yassergame-5850b.firebaseio.com",
+            projectId: "yassergame-5850b",
+            storageBucket: "yassergame-5850b.appspot.com",
+            messagingSenderId: "836578510537",
+            appId: "1:836578510537:web:2c32d64d38310f3eda2f18"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+// 
+        var fileBotton = document.getElementById('upload')
+        var upload = document.getElementById('u')
+        var b = document.getElementById('b').style.display = "none"
+        // var url = document.getElementById("upload").style.display = "none"
+        fileBotton.addEventListener('change', (e) => {
+            let file = e.target.files[0]
+            console.log(file)
+            var storageRef = firebase.storage().ref('image/' + file.name);
+            // let storegRef = firebase.storage().ref('image/' +file.name)
+            var task = storageRef.put(file)
+            task.on('state_changed',
+                (snapshot) => {
+                    document.getElementById('b').style.display = "inline" 
+                    var per = (snapshot.bytesTransferred / snapshot.totalBytes)
+                        * 100
+                    console.log(per)
+                    upload.value = per
+                }, (eror) => console.log(err),
+                () => {
+                    task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                        console.log('File available at', downloadURL);
+                        // url.value = downloadURL
+                        // console.log(url.value)
+                        document.getElementById('b').innerHTML = ` <i class="fa fa-check" aria-hidden="true"></i></i> Upload`
+                        // document.getElementById('form').action = `/book/create/hii`
+                        document.getElementById('imageupload1').value = downloadURL
+                    });
+                })
+        })
+    </script>

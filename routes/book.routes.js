@@ -29,6 +29,7 @@ router.get("/book", (req, res) => {
 router.get("/book/create",(req,res)=>{
   res.render("book/createbook")
 });
+
 router.post("/book/create", upload.single("imageupload"), (req, res, next) => {
   console.log(req.body);
   const file = req.file;
@@ -39,7 +40,7 @@ router.post("/book/create", upload.single("imageupload"), (req, res, next) => {
   }
   console.log(file.path);
   let book = new Book(req.body);
-  book.imageupload = "/images/" + file.filename;
+  book.imageupload = req.body.imageupload1;
   //save book
   book
     .save()
@@ -85,6 +86,28 @@ router.get("/profile", (req,res)=>{
     res.render("user/profile", { books, quotes , moment:moment})
   })
 })
+
+router.post("/book/create/:id", (req, res) => {
+  console.log(req.body);
+
+  let book = new Book(req.body);
+  book.imageupload = req.body.imageupload1;
+  //save book
+  book
+    .save()
+    .then((book) => {
+
+    User.findByIdAndUpdate(req.user._id, {$push:{books:book}})
+    .then( ()=> {
+      res.redirect("/book/")
+    } )
+
+    })
+    .catch(err => {
+      console.log(err);
+      res.send("Error!!!!!");
+    });
+});
 
 
 module.exports = router
