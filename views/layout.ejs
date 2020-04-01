@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <title>Login Application</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
   <% }); %> <% } %>
   <header class="layoutheader">
     <div class="container">
-      <h1 class="logo"><a href="/home">GOOD READERS</a></h1>
+      <h1 class="logo"><a href="/home">GOOD READERS </a></h1>
       <nav>
         <ul class="navigation">
           
@@ -34,7 +35,7 @@
           <li> <a href="/quote">Quotes</a></li>
 
           <li> <a href="/auth/setting">Setting</a></li>
-          <li> <a href="/auth/logout">Logout</a></li>
+          <li> <a href="/auth/logout">Signout</a></li>
           <%} %> <% if(!currentUser) {%>
           <li>
             <a href="/auth/signin">Signin</a> </li>
