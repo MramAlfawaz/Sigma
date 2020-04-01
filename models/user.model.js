@@ -32,19 +32,6 @@ const userSchema = mongoose.Schema(
       ref: 'Book' 
     }],
   
-    isAdmin: {
-      type: Boolean,
-      default: false
-    },
-    isSuperUser: {
-      type: Boolean,
-      default: false
-    },
-    userType: {
-      type: String,
-      enum: ["admin", "regular", "superAdmin"], //only listed can be values
-      default: "admin"
-    },
     quote: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Quote'

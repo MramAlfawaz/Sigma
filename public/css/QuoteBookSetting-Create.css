@@ -6,17 +6,14 @@ h1{
   letter-spacing: .01em;
   margin-bottom: 30px;
 }
-
 #feedback-page{
 	text-align:center;
 }
-
 #form-main{
 	width:100%;
 	float:left;
 	padding-top:0px;
 }
-
 #form-div {
 	background-color: rgba(0, 0, 0, 0.7);
   padding-left: 35px;
@@ -33,7 +30,6 @@ h1{
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
-
 textarea{
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 18px;
@@ -49,7 +45,6 @@ textarea{
 	box-sizing: border-box;
   border: 2px solid #bdc3c7;
 }
-
 .feedback-input {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 18px;
@@ -65,7 +60,6 @@ textarea{
 	box-sizing: border-box;
   border: 2px solid #bdc3c7;
 }
-
 .feedback-input:focus{
 	background: white;
 	box-shadow: 0;
@@ -74,18 +68,14 @@ textarea{
 	outline: none;
   padding: 13px 13px 13px 13px;
 }
-
 .focused{
 	color: rgba(92, 113, 134, 0.9);
 	border:	rgba(92, 113, 134, 0.9) solid 3px;
 }
-
-
 input:hover, textarea:hover,
 input:focus, textarea:focus {
 	background-color:white;
 }
-
 #submit-button{
 	font-family: webfontbold, Arial, Helvetica, sans-serif;
 	float:left;
@@ -102,16 +92,13 @@ input:focus, textarea:focus {
 	transition: all 0.3s;
   margin-top: 4%;
 }
-
 #submit-button:hover{
 	background-color: rgba(204, 204, 204,0.9);
 	color: rgba(92, 113, 134, 0.9);
 }
-	
 .submit:hover{
 	color: rgba(149, 165, 166,0.9);
 }
-	
 .ease {
 	width: 0px;
 	height: 74px;
@@ -122,12 +109,10 @@ input:focus, textarea:focus {
 	-ms-transition: .3s ease;
 	transition: .3s ease;
 }
-
 .submit:hover .ease{
   width:100%;
   background-color:white;
 }
-
 @media only screen and (max-width: 580px) {
 	#form-div{
 		left: 3%;
@@ -138,7 +123,6 @@ input:focus, textarea:focus {
 		padding-right: 3%;
 	}
 }
-
 label {
   float: left;
   padding: 4px;
