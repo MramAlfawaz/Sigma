@@ -18,6 +18,8 @@
     
   }
   .logo {
+    font-size: 25px;
+    height: 50px;
     color: white;
     text-transform: uppercase;
     padding-top: 6px;
@@ -40,6 +42,8 @@
     padding: .5em;
   }
   .navigation a {
+    font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+
     display: block;
     text-decoration: none;
     color: rgb(218, 200, 188);
