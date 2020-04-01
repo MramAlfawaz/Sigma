@@ -1,96 +1,17 @@
-/* layout.ejs nav style */
-  body {
-
+/* qouote style */
+body{
   font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
-    /* height of nav */
-    line-height: 1;
-    font-weight: bold;
-    text-align: center;
-    background-color: rgb(226, 226, 225);
-  }
-  .container {
-    /* organize nav content */
-    max-width: 70%;
-    margin: 0 auto;
-  }
-  .layoutheader {
-    background: rgba(136, 115,78, 0.8);
-    height: 50px;
-    
-  }
-  .logo {
-    font-size: 25px;
-    color: white;
-    text-transform: uppercase;
-    padding-top: 4px;
-  }
-  .logo a {
-    
-    display: block;
-    text-decoration: none;
-    color: rgb(218, 200, 188);
-    margin-top: 6px;
-  }
-  .logo a:hover {
-    text-decoration: none;
-    color: white;
-  }
-  .navigation {
-    list-style: none;
-  }
-  .navigation li {
-    display: block;
-    padding: .5em;
-    font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
-
-  }
-  .navigation a {
-    display: block;
-    text-decoration: none;
-    color: rgb(218, 200, 188);
-  }
-  .navigation a:hover {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-    .navigation li {
-      display: inline-block;
-    }
-  @media (min-width: 900px) {
-    .logo {
-      float: left;
-    }
-    .navigation {
-      float: right;
-    }
-    /* nav with baclground */
-    .navigation li {
-     margin-top: 6px;
-    }
-    header::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-  }
-  /* qouote style */
+}
 .qouteindex
 {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
-  display: grid;
-	grid-template-columns: repeat(4,1fr);
+  display: flex;
 }
 *
 {
-  margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-.qh1 {
-  font-size: 30px;
-  font-weight:700;
-  color: rgb(172, 106, 80);
 }
 .qh2
 {
@@ -113,7 +34,14 @@
 {
   height:18em;
   width:14em;
-  margin:2% auto;
+  margin:5% auto;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
   position:relative;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -121,7 +49,7 @@
   border-radius:16px;
   overflow:hidden;
   -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-  box-shadow:  15px 15px 27px #c2aea1, -15px -15px 27px #c2aea1;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
   margin-bottom:3em;
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
@@ -148,12 +76,21 @@
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0.5em 1em;
-  padding-top: 20px;
   text-align:center;
-  
 }
-
-
+/* Social Icons */
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 /* Property Cards Hover States */
 .property-card:hover .property-description
 {
@@ -170,5 +107,7 @@
 }
 .property-card:hover .property-social-icons:hover
 {
+  background-color:blue;
   cursor:pointer;
 }
+

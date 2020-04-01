@@ -1,29 +1,22 @@
 /* home page style */
-html,body{
-  font: 18px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
-
+body{
+  font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
 }
-
   #homeNav li a {
     text-align: center;
     display: flex;
     justify-content: center;
   }
-
   #homeNav li a:hover{
     color: rgba(0, 0, 0, 0.6);
   }
-
   .aboutParagraph{
     font-size: 25px;
     text-align: left;
     margin-left: 70px;
     line-height: 33px;
     color: rgb(255, 255, 255);
-   
   }
- 
-
   .homeHeader {
    height: 70px;
    background-color: #353535;
@@ -32,33 +25,23 @@ html,body{
    justify-content: space-between;
    align-items: center;
    border-bottom: 1px dashed rgb(168, 129, 91);
-   
-
   }
-
   section{
     padding-top: 190px;
     height: 670px;
     background: url("https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");  
     opacity: 0.85;
     border-bottom: 1px dashed rgb(168, 129, 91);
-
   }
-    
-
   #aboutTopic {
      font-size: 20px;
      color: white;
      padding-bottom: 10px;
   }
-
   #aboutText{
      font-size: 20px;
      color: white;
   }
-  
-
-
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
   --d: 700ms;
@@ -194,14 +177,12 @@ body {
   font-weight: bold;
   line-height: 1.2;
 }
-
 .copy {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-style: italic;
   line-height: 1.35;
 }
-
 .btn {
   cursor: pointer;
   margin-top: 1.5rem;
@@ -274,20 +255,158 @@ body {
             transition-duration: 0s;
   }
 }
-
-
-
-/* Color Variables */
-/* Social Icon Mixin */
+/* footer style */
+.site-footer {
+  background-color: #26272b;
+  padding-bottom: 30px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+  text-align: center;
+}
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+.site-footer hr.small {
+  margin: 20px 0;
+}
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+.site-footer a {
+  color: #737373;
+}
+.site-footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+.footer-links li {
+  display: block;
+}
+.footer-links a {
+  color: #737373;
+}
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+.footer-links.inline li {
+  display: inline-block;
+}
+.site-footer .social-icons {
+  text-align: right;
+}
+.site-footer .social-icons a {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d;
+}
+.copyright-text {
+  padding-top: 1%;
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .site-footer [class^="col-"] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
+  }
+}
+.social-icons {
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
+}
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe;
+}
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
+}
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
+}
+.social-icons a.twitter:hover {
+  background-color: #00aced;
+}
+.social-icons a.linkedin:hover {
+  background-color: #007bb6;
+}
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89;
+}
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+}
 /* Social Icons */
 .social-icons {
   display: -webkit-box;
   display: flex;
-   display: -webkit-box;
+  display: -webkit-box;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-height: 30vh;
 }
 
@@ -295,9 +414,9 @@ body {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   position: relative;
   width: 80px;
   height: 80px;
@@ -317,7 +436,7 @@ body {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translate(-50%, -150%);
-          transform: translate(-50%, -150%);
+  transform: translate(-50%, -150%);
 }
 .social-icon:active {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
@@ -375,6 +494,121 @@ body {
   pointer-events: none;
   text-transform: uppercase;
   -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.tooltip:after {
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  -webkit-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
+}
+.social-icons {
+  display: -webkit-box;
+  display: flex;
+   display: -webkit-box;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 30vh;
+<<<<<<< HEAD
+   
+=======
+>>>>>>> 1494322892a68b9ef30261d6d8459b71a02a6dd4
+}
+.social-icon {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 2.5rem;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+.social-icon:hover {
+  color: #fff;
+}
+.social-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+}
+.social-icon:active {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+.social-icon--linkedin {
+  background: #006599;
+  color: #fff;
+}
+.social-icon--linkedin .tooltip {
+  background: #006599;
+  color: currentColor;
+}
+.social-icon--linkedin .tooltip:after {
+  border-top-color: #006599;
+}
+.social-icon--twitter {
+  background: #2b97f1;
+  color: #fff;
+}
+.social-icon--twitter .tooltip {
+  background: #2b97f1;
+  color: currentColor;
+}
+.social-icon--twitter .tooltip:after {
+  border-top-color: #2b97f1;
+}
+.social-icon--github {
+  background: #4284c0;
+  color: #fff;
+}
+.social-icon--github .tooltip {
+  background: #4284c0;
+  color: currentColor;
+}
+.social-icon--github .tooltip:after {
+  border-top-color: #4284c0;
+}
+.social-icon i {
+  position: relative;
+  top: 1px;
+}
+/* Tooltips */
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.8rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -393,6 +627,9 @@ body {
   border-color: transparent;
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
+<<<<<<< HEAD
+}
+=======
 }
 
 
@@ -400,3 +637,4 @@ body {
 
 
 
+>>>>>>> 1494322892a68b9ef30261d6d8459b71a02a6dd4
