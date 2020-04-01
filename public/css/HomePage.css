@@ -1,4 +1,7 @@
 /* home page style */
+body{
+  font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+}
   #homeNav li a {
     text-align: center;
     display: flex;
