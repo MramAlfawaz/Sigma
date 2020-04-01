@@ -18,6 +18,11 @@ html, body {
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    display: inline;
+    }
+
+    form {
+      display: inline;
     }
   h1, h2 {
     color: #4f5459;
@@ -29,6 +34,12 @@ html, body {
   .pquote{
       margin-left: -1050px;
   }
+<<<<<<< HEAD
+=======
+  
+  
+
+>>>>>>> 1494322892a68b9ef30261d6d8459b71a02a6dd4
   .footer li {
     text-align: left;
   }
@@ -133,7 +144,7 @@ html, body {
   }
 .userbook{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 10px;
 }
   /* book css */

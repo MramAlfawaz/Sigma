@@ -140,21 +140,12 @@
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0.5em 1em;
+  padding-top: 20px;
   text-align:center;
+  
 }
-/* Social Icons */
-.property-social-icons
-{
-  width:1em;
-  height:1em;
-  background-color:black;
-  position:absolute;
-  bottom:1em;
-  left:1em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+
+
 /* Property Cards Hover States */
 .property-card:hover .property-description
 {
@@ -171,6 +162,5 @@
 }
 .property-card:hover .property-social-icons:hover
 {
-  background-color:blue;
   cursor:pointer;
 }
