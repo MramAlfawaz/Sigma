@@ -1,6 +1,4 @@
 /* layout.ejs nav style */
- 
-  
   body {
     font-family: 'Helvetica', Arial, sans-serif;
     /* height of nav */
@@ -9,70 +7,54 @@
     text-align: center;
     background-color: rgb(226, 226, 225);
   }
-  
   .container {
     /* organize nav content */
     max-width: 70%;
     margin: 0 auto;
   }
-  
   .layoutheader {
     background: rgba(175, 96, 32, 0.5);
   }
-  
   .logo {
     color: white;
     text-transform: uppercase;
   }
-  
   .logo a {
     display: block;
     text-decoration: none;
     color: rgb(218, 200, 188);
     margin-top: 6px;
-
   }
-
   .logo a:hover {
     text-decoration: none;
     color: white;
   }
-  
   .navigation {
     list-style: none;
   }
-  
   .navigation li {
     display: block;
     padding: .5em;
   }
-  
   .navigation a {
     display: block;
     text-decoration: none;
     color: rgb(218, 200, 188);
   }
-  
   .navigation a:hover {
     text-decoration: none;
     color: rgb(255, 255, 255);
   }
-  
-
-    
     .navigation li {
       display: inline-block;
     }
-  
   @media (min-width: 900px) {
     .logo {
       float: left;
     }
-    
     .navigation {
       float: right;
     }
-
     /* nav with baclground */
     .navigation li {
      margin-top: 6px;
@@ -83,9 +65,7 @@
       clear: both;
     }
   }
-
   /* qouote style */
-  
 .qouteindex
 {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
@@ -93,42 +73,34 @@
   display: grid;
 	grid-template-columns: repeat(4,1fr);
 }
-
 *
 {
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .qh1 {
   font-size: 30px;
   font-weight:700;
   color: rgb(172, 106, 80);
 }
-
-
 .qh2
 {
   margin:0px;
   font-size:1.4em;
   font-weight:700;
 }
-
 .qp
 {
   font-size:12px;
 }
-
 .center
 {
   height:100%;
   width:100%;
   padding:0em auto;
 }
-
 /* End Non-Essential  */
-
 .property-card
 {
   height:18em;
@@ -145,9 +117,7 @@
   margin-bottom:3em;
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
-
 /* Top Half of card, image. */
-
 .property-image
 {
   height:6em;
@@ -155,13 +125,10 @@
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  
   background-size:cover;
   background-repeat:no-repeat;
 }
-
 /* Bottom Card Section */
-
 .property-description
 {
   background-color: #FAFAFC;
@@ -175,9 +142,7 @@
   padding: 0.5em 1em;
   text-align:center;
 }
-
 /* Social Icons */
-
 .property-social-icons
 {
   width:1em;
@@ -190,9 +155,7 @@
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
 /* Property Cards Hover States */
-
 .property-card:hover .property-description
 {
   height:0em;
@@ -202,17 +165,12 @@
 {
   height:18em;
 }
-
 .property-card:hover .property-social-icons
 {
   background-color:white;
 }
-
 .property-card:hover .property-social-icons:hover
 {
   background-color:blue;
   cursor:pointer;
 }
-
-
-

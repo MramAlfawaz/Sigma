@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="/css/profile.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
   integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
 <div id="main">
   <header class="homeHeader">
     <div class="container">
@@ -19,72 +18,46 @@
   </div>
   <div id="content">
     <h1>Your Books</h1>
-
     <div class="userbook">
       <% books.forEach(book => { %>
-
       <div class="whole-book-box">
-
         <section class="book-image">
           <img src="<%= book.imageupload %>" / height="230" width="180">
         </section>
-
-
         <article class="book-detail">
-
           <h3><%= book.bookName %></h3>
           <p class="book-page"> Pages: <%= book.pagesCount %></p>
-
-
-
           <form method="POST" action="/book/<%= book._id %>/delete?_method=DELETE">
             <a href="#" class="perchase-button">
               <i class="fas fa-trash"></i>
               <button type="submit">Delete</button></a>
-
           </form>
-
-
-
         </article>
-
       </div>
       <% }) %>
-
     </div>
     <br>
-
     <h1 class="pquote">Quotes:</h1>
     <div class="posts">
-
       <div class="post">
         <% quotes.forEach(quote => { %>
-
         <div class="message">
           <div class="box">
             <div class="body">
               <p><%= quote.quote %></p>
             </div>
             <div class="footer">
-              <li>12 hours ago &nbsp; | &nbsp; 
-
-                  <form method="POST" action="/quote/<%= quote._id %>/delete?_method=DELETE">
-                      <button type="submit"><i class="fas fa-trash"></i></button>
-
-                  </form>
-
-                </li>
-
+              <li> Created On <%= moment(quotes.createdAt).fromNow() %> &nbsp; | &nbsp;
+                <form method="POST" action="/quote/<%= quote._id %>/delete?_method=DELETE">
+                  <button type="submit"><i class="fas fa-trash"></i></button>
+                </form>
+              </li>
             </div>
           </div>
         </div>
         <% }) %>
-
       </div>
-
     </div>
-
   </div>
-
 </div>
 </div>
