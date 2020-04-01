@@ -1,6 +1,7 @@
 /* layout.ejs nav style */
   body {
-    font-family: 'Helvetica', Arial, sans-serif;
+
+  font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
     /* height of nav */
     line-height: 1;
     font-weight: bold;
@@ -13,11 +14,13 @@
     margin: 0 auto;
   }
   .layoutheader {
-    background: rgba(175, 96, 32, 0.5);
+    background: rgba(136, 115,78, 0.8);
+    
   }
   .logo {
     color: white;
     text-transform: uppercase;
+    padding-top: 6px;
   }
   .logo a {
     display: block;

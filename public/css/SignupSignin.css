@@ -1,4 +1,7 @@
 /* login logout form */
+body{
+  font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+}
 #authForm{
     background: url("https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: cover; 

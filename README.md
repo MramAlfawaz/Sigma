@@ -1,4 +1,7 @@
-# Book Recommendation
+# Book Recommendation 
+GOOD READERS is website for book recommendations.  to help readers find and share books they love. 
+
+
 ## Technologies used:
 - html
 - CSS

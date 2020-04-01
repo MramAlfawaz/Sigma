@@ -1,4 +1,7 @@
 /* qouote style */
+body{
+  font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+}
 .qouteindex
 {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
