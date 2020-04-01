@@ -23,6 +23,15 @@ const userSchema = mongoose.Schema(
       required: true
       //   minlength: [6, "Khalas your password is too weak"]
     },
+    qoutes:[{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Quote' 
+    }],
+    books:[ {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Book' 
+    }],
+  
     isAdmin: {
       type: Boolean,
       default: false
