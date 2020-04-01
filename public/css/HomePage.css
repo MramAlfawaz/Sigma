@@ -6,6 +6,10 @@
     justify-content: center;
   }
 
+  #homeNav li a:hover{
+    color: rgba(0, 0, 0, 0.6);
+  }
+
   .aboutParagraph{
     font-size: 25px;
     text-align: left;

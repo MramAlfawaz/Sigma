@@ -2,44 +2,54 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
  <div id="main">
-  <header>
-    <h1>Here your pretty uploads 	 </h1>
-    
-  </header>
+  <header class="homeHeader">
+    <div class="container">
+        <nav>
+            <ul class="navigation" id="homeNav">
+              <li>New Recommindation &nbsp;  | </li>
+                <li> <a href="/book/create">Book </a></li>
+                <li> <a href="/quote/create">Quote</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
    <div class="progress-bar">
       <div class="progress-bar-inner" style="width:35%;"></div>
     </div>
   <div id="content">
-    <h1>Your Books</h1>
+    <h1>Your Books</h1> 
+
    <div class="userbook">
+    <% books.forEach(book => { %>
+
     <div class="whole-book-box">
 
       <section class="book-image">
-         <img src="http://gahag.net/img/201608/26s/gahag-0119028908-1.png"/ height="230">
+         <img src="<%= book.imageupload %>"/ height="230">
       </section>
 
+
       <article class="book-detail">
-        <h3>Book Name</h3>
-       <p class="book-price">100 pages</p>
-       <a href="#" class="perchase-button">
-        <i class="fas fa-trash"></i>
-         delete</a>
+
+        <h3><%= book.bookName %></h3>
+       <p class="book-page"> Pages: <%= book.pagesCount %></p>
+
+       
+
+         <form method="POST" 
+         action="/book/<%= book._id %>/delete?_method=DELETE">
+         <a href="#" class="perchase-button">
+          <i class="fas fa-trash"></i>
+          <button type="submit">Delete</button></a>
+    
+     </form>
+
+      
+
       </article>
 
     </div>
-
-   <div class="whole-book-box">
-    <section class="book-image">
-       <img src="http://gahag.net/img/201608/26s/gahag-0119028908-1.png"/ height="230">
-    </section>
-    <article class="book-detail">
-      <h3>Book Name</h3>
-     <p class="book-price">100 pages</p>
-     <a href="#" class="perchase-button">
-  <i class="fas fa-trash"></i>
-       delete</a>
-    </article>
- </div>
+<% }) %>
 
 </div>
 <br>

@@ -69,6 +69,12 @@ router.post("/auth/signin",
   })
 );
 
+router.get("/home", (request, response) => {
+ 
+   response.render("home");
+
+});
+
 // method in config 
 router.get("/home", isLoggedIn, (request, response) => {
   // request.user
