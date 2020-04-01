@@ -114,5 +114,7 @@ router.put('/auth/updatePassword' , (req, res) =>{
   }).catch(err => res.send ({pass : newPassword , user:req.user}))
 })
 
-
+router.get("/group/sigma", (request, response) => {
+  response.render("group/sigma");
+});
 module.exports = router;
