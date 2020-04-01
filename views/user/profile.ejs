@@ -66,7 +66,7 @@
               <p><%= quote.quote %></p>
             </div>
             <div class="footer">
-              <li>12 hours ago &nbsp; | &nbsp; 
+              <li> Created On <%= moment(quotes.createdAt).fromNow() %> &nbsp; | &nbsp; 
 
                   <form method="POST" action="/quote/<%= quote._id %>/delete?_method=DELETE">
                       <button type="submit"><i class="fas fa-trash"></i></button>

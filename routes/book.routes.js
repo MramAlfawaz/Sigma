@@ -82,7 +82,7 @@ router.get("/profile", (req,res)=>{
   .then ((user)=>{
     let books = user.books
     let quotes = user.quotes
-    res.render("user/profile", { books, quotes})
+    res.render("user/profile", { books, quotes , moment:moment})
   })
 })
 

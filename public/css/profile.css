@@ -21,6 +21,11 @@ html, body {
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    display: inline;
+    }
+
+    form {
+      display: inline;
     }
   
   h1, h2 {
@@ -36,6 +41,8 @@ html, body {
       margin-left: -1050px;
   }
   
+  
+
   .footer li {
     text-align: left;
   }

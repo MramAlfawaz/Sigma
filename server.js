@@ -51,7 +51,7 @@ app.use(
     secret: process.env.SECRET,
     saveUninitialized: true,
     resave: false
-    // cookie: { maxAge: 360000 } //duration of session
+    // cookie: { maxAge: 360000 } 
   })
 );
 // to allow us using techniqes of passport
