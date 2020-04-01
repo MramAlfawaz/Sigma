@@ -4,6 +4,7 @@ const moment = require("moment");
 const multer = require("multer");
 const path = require("path");
 const User = require("../models/user.model");
+
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
     cb(null, "public/images");
@@ -68,7 +69,7 @@ router.get("/book/:id", (request, response) => {
 router.delete("/book/:id/delete", (request, response) => {
    Book.findByIdAndDelete(request.params.id)
    .then(book => {
-      response.redirect("/book");
+     response.redirect("/profile");
   }).catch(err => {
       console.log(err);
       response.send("Error!!!!!");
@@ -77,10 +78,11 @@ router.delete("/book/:id/delete", (request, response) => {
 
 
 router.get("/profile", (req,res)=>{
-  User.findById(req.user._id).populate("books")
+  User.findById(req.user._id).populate("books").populate("quotes")
   .then ((user)=>{
     let books = user.books
-    res.render("user/profile", {books})
+    let quotes = user.quotes
+    res.render("user/profile", { books, quotes})
   })
 })
 
