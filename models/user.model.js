@@ -23,7 +23,7 @@ const userSchema = mongoose.Schema(
       required: true
       //   minlength: [6, "Khalas your password is too weak"]
     },
-    qoutes:[{
+    quotes:[{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Quote' 
     }],

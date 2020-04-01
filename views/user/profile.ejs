@@ -1,81 +1,90 @@
 <link rel="stylesheet" href="/css/profile.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+  integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
- <div id="main">
+<div id="main">
   <header class="homeHeader">
     <div class="container">
-        <nav>
-            <ul class="navigation" id="homeNav">
-              <li>New Recommindation &nbsp;  | </li>
-                <li> <a href="/book/create">Book </a></li>
-                <li> <a href="/quote/create">Quote</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul class="navigation" id="homeNav">
+          <li>New Recommindation &nbsp; | </li>
+          <li> <a href="/book/create">Book </a></li>
+          <li> <a href="/quote/create">Quote</a></li>
+        </ul>
+      </nav>
     </div>
-</header>
-   <div class="progress-bar">
-      <div class="progress-bar-inner" style="width:35%;"></div>
-    </div>
+  </header>
+  <div class="progress-bar">
+    <div class="progress-bar-inner" style="width:35%;"></div>
+  </div>
   <div id="content">
-    <h1>Your Books</h1> 
+    <h1>Your Books</h1>
 
-   <div class="userbook">
-    <% books.forEach(book => { %>
+    <div class="userbook">
+      <% books.forEach(book => { %>
 
-    <div class="whole-book-box">
+      <div class="whole-book-box">
 
-      <section class="book-image">
-         <img src="<%= book.imageupload %>"/ height="230">
-      </section>
+        <section class="book-image">
+          <img src="<%= book.imageupload %>" / height="230" width="180">
+        </section>
 
 
-      <article class="book-detail">
+        <article class="book-detail">
 
-        <h3><%= book.bookName %></h3>
-       <p class="book-page"> Pages: <%= book.pagesCount %></p>
+          <h3><%= book.bookName %></h3>
+          <p class="book-page"> Pages: <%= book.pagesCount %></p>
 
-       
 
-         <form method="POST" 
-         action="/book/<%= book._id %>/delete?_method=DELETE">
-         <a href="#" class="perchase-button">
-          <i class="fas fa-trash"></i>
-          <button type="submit">Delete</button></a>
-    
-     </form>
 
-      
+          <form method="POST" action="/book/<%= book._id %>/delete?_method=DELETE">
+            <a href="#" class="perchase-button">
+              <i class="fas fa-trash"></i>
+              <button type="submit">Delete</button></a>
 
-      </article>
+          </form>
+
+
+
+        </article>
+
+      </div>
+      <% }) %>
 
     </div>
-<% }) %>
-
-</div>
-<br>
+    <br>
 
     <h1 class="pquote">Quotes:</h1>
     <div class="posts">
+
       <div class="post">
-        
-    <div class="message">
-        <div class="box">
+        <% quotes.forEach(quote => { %>
+
+        <div class="message">
+          <div class="box">
             <div class="body">
-              <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."</p>
+              <p><%= quote.quote %></p>
             </div>
             <div class="footer">
-                <li>12 hours ago 	&nbsp;  | 	&nbsp; <i class="fas fa-trash"></i></li>
-                
+              <li>12 hours ago &nbsp; | &nbsp; 
+
+                  <form method="POST" action="/quote/<%= quote._id %>/delete?_method=DELETE">
+                      <button type="submit"><i class="fas fa-trash"></i></button>
+
+                  </form>
+
+                </li>
 
             </div>
           </div>
         </div>
-    </div>
-      
+        <% }) %>
 
-      
       </div>
-   
+
     </div>
+
   </div>
+
+</div>
 </div>

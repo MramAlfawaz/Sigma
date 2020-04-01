@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const moment = require("moment");
-
 const multer = require("multer");
 const path = require("path");
+const User = require("../models/user.model");
+
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
     cb(null, "public/images");
@@ -46,12 +47,17 @@ router.post("/quote/create", upload.single("imageupload"), (req, res, next) => {
   console.log(file.path);
   let quote = new Quote(req.body);
   quote.imageupload = "/images/" + file.filename;
-  //save book
+  //save quote
   quote
     .save()
-    .then(() => {
-      res.redirect("/quote/")
-   })
+    .then((quote) => {
+
+      User.findByIdAndUpdate(req.user._id, {$push:{quotes:quote}})
+        .then(() => {
+          res.redirect("/quote/")
+        })
+
+    })
     .catch(err => {
        console.log(err);
      res.send("Error!!!!!");
@@ -68,10 +74,11 @@ router.get("/quote/:id", (req, res) => {
       res.send("Error!!!!!");
     });
 });
+
 router.delete("/quote/:id/delete", (req, res) => {
   Quote.findByIdAndDelete(req.params.id)
     .then(quote => {
-      res.redirect("/quote");
+      res.redirect("/profile");
     })
     .catch(err => {
       console.log(err);
