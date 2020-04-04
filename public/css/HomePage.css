@@ -2,6 +2,10 @@
 body{
   font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
 }
+
+#homeNav {
+  width: 100%;
+}
   #homeNav li a {
     text-align: center;
     display: flex;
