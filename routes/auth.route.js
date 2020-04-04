@@ -39,7 +39,7 @@ router.post("/auth/signup",
         // response.redirect("/home");
         //user login after registration
         passport.authenticate("local", {
-          successRedirect: "/home",
+          successRedirect: "/",
           successFlash: "Account created and You have logged In!"
         })(request, response);
       })
@@ -62,21 +62,21 @@ router.get("/auth/signin", (request, response) => {
 //at signin page
 router.post("/auth/signin",
   passport.authenticate("local", {
-    successRedirect: "/home", // if pass correct open home page
+    successRedirect: "/", // if pass correct open home page
     failureRedirect: "/auth/signin", // if incorrect ask re signin
     failureFlash: "Invalid Username or Password", //alert
     successFlash: "You have logged In!"
   })
 );
 
-router.get("/home", (request, response) => {
+router.get("/", (request, response) => {
  
    response.render("home");
 
 });
 
 // method in config 
-router.get("/home", isLoggedIn, (request, response) => {
+router.get("/", isLoggedIn, (request, response) => {
   // request.user
 
   User.find().then(users => {
@@ -110,7 +110,7 @@ router.put('/auth/updatePassword' , (req, res) =>{
   User.findByIdAndUpdate(req.user._id, { password: newPassword, firstname: newFirstName, lastname: newLastname, email: newEmail})
   .then(user =>{
     console.log(user)
-    res.redirect('/home')
+    res.redirect('/')
   }).catch(err => res.send ({pass : newPassword , user:req.user}))
 })
 
