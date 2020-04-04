@@ -1,5 +1,5 @@
 # Book Recommendation 
-GOOD READERS is website for book recommendations.  to help readers find and share books they love. 
+SIGMA READERS is website for book recommendations.  to help readers find and share books they love. 
 
 
 ## Technologies used:
@@ -28,4 +28,13 @@ GOOD READERS is website for book recommendations.  to help readers find and shar
 ## Development process and problem-solving strategy:
 Firstly, We designed wireframes by using balsamiq. After that we used mongoose database to save and manage data. Also, we used express router to orgnize code, ejs to structure our website,  express authentication bacause it support authentication using a username and password. Finally, we used CSS to control presentation, colors and background.
 
+
+## Future work:
+- making admin page to control websites
+- searching part for books
+- let users making own books blog 
+- orgnizing books in catagories 
+
+
+wish you have happy experience with SIGMAREADERS !!
 
