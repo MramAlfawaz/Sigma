@@ -47,7 +47,7 @@
               <p><%= quote.quote %></p>
             </div>
             <div class="footer">
-              <li> Created On <%= moment(quotes.createdAt).fromNow() %> &nbsp; | &nbsp; 
+              <li style="list-style-type: none;"> &nbsp; 
 
                   <form method="POST" action="/quote/<%= quote._id %>/delete?_method=DELETE">
                       <button type="submit"><i class="fas fa-trash"></i></button>
